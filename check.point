@@ -1,0 +1,20 @@
+ // Problem 1 
+function sumOfDistinctElements(set1, set2) {
+  const combinedArray = [...set1, ...set2];
+  const distinctElements = {}
+  for (let i = 0; i < combinedArray.length; i++) {
+    distinctElements[combinedArray[i]] = true
+  let sum = 0;
+  for (let element in distinctElements) {
+    sum += parseInt(element);
+  }
+  return sum;
+}
+
+// Example usage:
+const set1 = [3, 1, 7, 9];
+const set2 = [2, 4, 1, 9, 3];
+const sum = sumOfDistinctElements(set1, set2);
+console.log(sum);
+
+ // Problem 2 
